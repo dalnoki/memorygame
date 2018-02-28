@@ -1,0 +1,75 @@
+body {
+  background-image: url(..img/giftly.png); */ This pattern is downloaded from www.subtlepatterns.com
+}
+
+h1 {
+  margin:auto;
+  vertical-align: middle;
+  padding-bottom: 30px;
+}
+
+.game-area {
+
+  flex-direction: row;
+  display: flex;
+  background-color: #FF6700;
+  border-radius: 20px;
+  box-shadow: 5px 5px 24px 4px grey;
+  flex-wrap: wrap;
+  padding: 20px 50px;
+  margin: 25px 40px;
+
+
+}
+
+.card {
+
+  background-color: #3A6EA5;
+box-shadow: -2px 3px 8px 2px #3b3e41;
+  margin: 10px;
+  width: 10vw;
+  height: 10vw;
+padding: 10px;
+
+
+}
+
+.card-correct {
+  box-shadow: -2px 3px 8px 2px #3b3e41;
+  background-color: green;
+  margin: 10px;
+  width: 10vw;
+  height: 10vw;
+  padding: 10px;
+
+}
+
+.found-card {
+  background-color: #3A6EA5;
+
+}
+
+button {
+  display: block;
+  top: 13%;
+  margin: 0 auto;
+}
+
+main {
+ margin: auto;
+}
+
+img {
+  border-radius: 5px;
+  display: none;
+  margin: auto;
+  width: 90%;
+}
+/*
+
+#FF6700
+#3A6EA5
+#004E98
+#B6C197
+
+*/
