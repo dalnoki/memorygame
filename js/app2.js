@@ -1,7 +1,12 @@
 let cards = document.querySelectorAll(".card");
 let images = document.getElementsByTagName("img");
 let shuffleButtton = document.querySelector(".shuffle");
+let startTime = 0;
+let finishTime = 0;
 let totalGuesses = 0;
+
+let timer = new Timer();
+
 
 /* for loop to add event listener to all .card element */
 for (let i = 0; i < cards.length; i++) {
@@ -29,13 +34,16 @@ shuffleButtton.addEventListener("click", function shuffleCSS() {
 /* this function is called when a .card element is clicked, this contains most of the game logic */
 function cardClick () {
 
+  timer.start();
+timer.addEventListener('secondsUpdated', function (e) {
+    $('#timer').html(timer.getTimeValues().toString());
+});
+
+
+
   totalGuesses += 1;
 
-/*  if (totalGuesses = 1) {
-    let timer = new Date();
-  }
 
-/*  document.getElementsByClassName('moves').innerHTML = totalGuesses + "moves"; */
 
 
 
@@ -108,7 +116,7 @@ function isPair() {
 }
 }
 
-/* this function here checks if the game is won by the user or not */
+/* this function here checks if the game is won by the user or not, stops the timer and sets final data in modal */
 function hasWon () {
   let foundCards = 0;
 
@@ -118,7 +126,11 @@ function hasWon () {
     }
 
     if (foundCards === 20) {
+let time =  timer.getTimeValues().toString();
+      timer.stop();
+
       $('#winnerModal').modal('show');
+        document.getElementById("elapsed-time").innerHTML = `This game lasted for ${time} seconds - and it took ${totalGuesses} steps to complete it! :)`;
     }
 
 }
