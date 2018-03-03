@@ -7,3 +7,5 @@ To start the game, you'll need to click on the (Re)start button - if you click o
 The game counts the guesses you made and the elapsed time and gives you star-rating based on the amount of steps. 
 
 You can shuffle things a bit with the Shuffle button - if you're a real Memory game pro, you can always shuffle during the game ;)
+
+You can try it here: https://dalnoki.github.io/memorygame/
