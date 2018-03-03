@@ -1,120 +1,95 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Title of the document</title>
-  <meta content="width=device-width, initial-scale=1" name="viewport">
-  <meta content="This is Dalnoki-Papp Zsófi's portfolio page. Welcome!" name="description">
-  <meta charset="utf-8">
-  <link href="https://fonts.googleapis.com/css?family=Mukta+Mahee" rel="stylesheet">
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/main.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/wickedcss.min.css">
+    <title>Title of the document</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="Horse Memory" name="description">
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Mukta+Mahee" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel=
+    "stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel=
+    "stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/wickedcss.min.css" rel="stylesheet">
 </head>
 <body>
-  <!-- modal html is here -->
-  <div class="modal fade" tabindex="-1" role="dialog" id="winnerModal">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title">Modal title</h4>
-      </div>
-      <div class="modal-body">
-        <p>#nyerési</p>
-        <p id="elapsed-time"></p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-  <!-- modal html is over -->
-</div>
-  <header class="container-fluid  justify-content-center">
-    <div class="row align-items-center justify-content-between">
-<h1>Memory game</h1>
-<p id="timer">00:00:00</p>
-<button type="button" class="shuffle">Shuffle</button>
-    <p class="moves"></p>
-    </div>
-  </header>
-  <main>
-    <section class="game-area">
-
-     <div class="card horse2">
-       <img src="img/horse2.jpg">
-     </div>
-     <div class="card horse2">
-       <img src="img/horse2.jpg">
-
-     </div>
-     <div class="card horse3">
-       <img src="img/horse3.jpg">
-
-     </div>
-     <div class="card horse3">
-       <img src="img/horse3.jpg">
-     </div>
-     <div class="card">
-       <img src="img/horse1.jpg">
-     </div>
-
-    <div class="card horse1">
-      <img src="img/horse1.jpg">
-    </div>
-    <div class="card horse1">
-        <img src="img/horse4.jpg">
-    </div>
-    <div class="card horse4">
-        <img src="img/horse4.jpg">
-    </div>
-    <div class="card horse5">
-      <img src="img/horse5.jpg">
-    </div>
-    <div class="card horse5">
-      <img src="img/horse5.jpg">
-    </div>
-
-   <div class="card horse6">
-     <img src="img/horse6.jpg">
-   </div>
-   <div class="card horse6">
-     <img src="img/horse6.jpg">
-   </div>
-   <div class="card horse7">
-     <img src="img/horse7.jpg">
-   </div>
-   <div class="card horse7">
-     <img src="img/horse7.jpg">
-   </div>
-   <div class="card horse8">
-     <img src="img/horse8.jpg">
-   </div>
-
-  <div class="card horse8">
-    <img src="img/horse8.jpg">
-  </div>
-  <div class="card horse9">
-    <img src="img/horse9.jpg">
-  </div>
-  <div class="card horse9">
-    <img src="img/horse9.jpg">
-  </div>
-  <div class="card horse10">
-    <img src="img/horse10.jpg">
-  </div>
-  <div class="card horse10">
-      <img src="img/horse10.jpg">
-  </div>
-</section>
-</section>
-      </main>
-      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<script src="js/easytimer.min.js"></script>
-<script src="js/app2.js"></script>
+    <!-- modal html is here -->
+    <div class="modal fade" id="winnerModal" role="dialog" tabindex="-1">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">We have a winner here!</h4>
+                </div>
+                <div class="modal-body">
+                    <p id="you-won"></p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-default restart-game" data-dismiss="modal" type=
+                    "button">Restart</button> <button class="btn btn-default" data-dismiss="modal"
+                    type="button">Close</button>
+                </div>
+            </div>
+        </div>
+    </div><!-- modal html is over -->
+    <header class="container-fluid justify-content-center">
+        <div class="row align-items-center justify-content-between">
+            <h1>Memory game</h1>
+            <div id="timer">
+                00:00:00
+            </div>
+            <div class="moves"></div>
+            <div id="stars">
+                <i class="fas fa-star star1"></i><i class="fas fa-star star2"></i><i class=
+                "fas fa-star star3"></i>
+            </div><button class="shuffle" type="button">Shuffle</button> <button class="start-game"
+            type="button">(Re)Start game</button>
+        </div>
+    </header>
+    <main>
+        <section class="game-area">
+            <h2>...with horses!</h2>
+            <div class="card animated"><img alt="horse in sunset" src="img/horse2.jpg"></div>
+            <div class="card animated"><img alt="horse in sunset" src="img/horse2.jpg"></div>
+            <div class="card animated"><img alt="horse in front of mountains" src=
+            "img/horse3.jpg"></div>
+            <div class="card animated"><img alt="horse in front of mountains" src=
+            "img/horse3.jpg"></div>
+            <div class="card animated"><img alt="horse behind some bushes" src=
+            "img/horse1.jpg"></div>
+            <div class="card animated"><img alt="horse behind some bushes" src=
+            "img/horse1.jpg"></div>
+            <div class="card animated"><img alt="horse head" src="img/horse4.jpg"></div>
+            <div class="card animated"><img alt="horse head" src="img/horse4.jpg"></div>
+            <div class="card animated"><img alt="horse mouth" src="img/horse5.jpg"></div>
+            <div class="card animated"><img alt="horse mouth" src="img/horse5.jpg"></div>
+            <div class="card animated"><img alt="white horse head" src="img/horse6.jpg"></div>
+            <div class="card animated"><img alt="white horse head" src="img/horse6.jpg"></div>
+            <div class="card animated"><img alt="hip horse with flowers" src=
+            "img/horse7.jpg"></div>
+            <div class="card animated"><img alt="hip horse with flowers" src=
+            "img/horse7.jpg"></div>
+            <div class="card animated"><img alt="two horses hugging" src="img/horse8.jpg"></div>
+            <div class="card animated"><img alt="two horses hugging" src="img/horse8.jpg"></div>
+            <div class="card animated"><img alt="white horse in front of mountains" src=
+            "img/horse9.jpg"></div>
+            <div class="card animated"><img alt="white horse in front of mountains" src=
+            "img/horse9.jpg"></div>
+            <div class="card animated"><img alt="running horse" src="img/horse10.jpg"></div>
+            <div class="card animated"><img alt="running horse" src="img/horse10.jpg"></div>
+        </section>
+    </main>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js">
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js">
+    </script>
+    <script src="js/easytimer.min.js">
+    </script>
+    <script src="js/app2.js">
+    </script>
 </body>
-
-
 </html>
